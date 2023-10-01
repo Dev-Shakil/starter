@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Accounts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../styles/style.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+ <style>
+  body {
+      margin: 0;
+      padding: 0;
+  }
+
+</style>
+</head>
+<body class="">
+  <div class="relative min-h-screen md:flex" data-dev-hint="container">
+    <input type="checkbox" id="menu-open" class="hidden" />
+
+    <label for="menu-open" class="absolute right-2 bottom-2 shadow-lg rounded-full p-2 bg-gray-100 text-gray-600 md:hidden" data-dev-hint="floating action button">
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </label>
+
+    <header class="bg-gray-600 text-gray-100 flex justify-between md:hidden" data-dev-hint="mobile menu bar">
+        <a href="#" class="block p-4 text-white font-bold whitespace-nowrap truncate">
+            Your App is cool
+        </a>
+
+        <label for="menu-open" id="mobile-menu-button" class="m-2 p-2 focus:outline-none hover:text-white hover:bg-gray-700 rounded-md">
+            <svg id="menu-open-icon" class="h-6 w-6 transition duration-200 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-close-icon" class="h-6 w-6 transition duration-200 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </label>
+    </header>
+
+    <aside id="sidebar" class="bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation max-h-[100vh]">
+        <div class="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
+            <a href="#" class="text-white flex items-center space-x-2 px-4" title="Your App is cool">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+                <span class="text-2xl font-extrabold whitespace-nowrap truncate">Your App is cool</span>
+            </a>
+
+          
+            <nav data-dev-hint="main navigation">
+              <a href="/index.html" class="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <i class="bi bi-house-door-fill"></i>
+                  <span>Home</span>
+              </a>
+              <a href="/components/agency.html" class="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <i class="bi bi-person-lines-fill"></i>
+                  <span>Agency</span>
+              </a>
+              
+              
+          </nav>
+          </div>
+    </aside>
+
+    
+    
+    <main id="content" class="flex-1 px-6 lg:px-8 overflow-y-scroll">
+      <div class=" mx-auto flex gap-x-2 md:flex-nowrap flex-wrap">
+          <!-- Replace with your content -->
+          <section class="md:w-[50%] w-[100%] p-6 mx-auto bg-indigo-600 rounded-md shadow-md dark:bg-gray-800 mt-5 min-h-[95vh]">
+            <h1 class="text-xl font-bold text-white capitalize dark:text-white"><i class="bi bi-pencil-square mr-2"></i>Agency Entry</h1>
+            <form>
+                <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+                    <div>
+                        <label class="text-white dark:text-gray-200" for="username">Username</label>
+                        <input id="username" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+        
+                    <div>
+                        <label class="text-white dark:text-gray-200" for="emailAddress">Email Address</label>
+                        <input id="emailAddress" type="email" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+        
+                    <div>
+                        <label class="text-white dark:text-gray-200" for="password">Password</label>
+                        <input id="password" type="password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+        
+                    <div>
+                        <label class="text-white dark:text-gray-200" for="passwordConfirmation">Password Confirmation</label>
+                        <input id="passwordConfirmation" type="password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+                    <div>
+                        <label class="text-white dark:text-gray-200" for="passwordConfirmation">Color</label>
+                        <input id="color" type="color" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+                    <div>
+                        <label class="text-white dark:text-gray-200" for="passwordConfirmation">Select</label>
+                        <select class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                            <option>Surabaya</option>
+                            <option>Jakarta</option>
+                            <option>Tangerang</option>
+                            <option>Bandung</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-white dark:text-gray-200" for="passwordConfirmation">Range</label>
+                        <input id="range" type="range" class="block w-full py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+                    <div>
+                        <label class="text-white dark:text-gray-200" for="passwordConfirmation">Date</label>
+                        <input id="date" type="date" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+                    <div>
+                        <label class="text-white dark:text-gray-200" for="passwordConfirmation">Text Area</label>
+                        <textarea id="textarea" type="textarea" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-white">
+                        Image
+                      </label>
+                      <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                        <div class="space-y-1 text-center">
+                          <svg class="mx-auto h-12 w-12 text-white" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <div class="flex text-sm text-gray-600">
+                            <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                              <span class="">Upload a file</span>
+                              <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                            </label>
+                            <p class="pl-1 text-white">or drag and drop</p>
+                          </div>
+                          <p class="text-xs text-white">
+                            PNG, JPG, GIF up to 10MB
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+        
+                <div class="flex justify-end mt-6">
+                    <button class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-pink-500 rounded-md hover:bg-pink-700 focus:outline-none focus:bg-gray-600">Save</button>
+                </div>
+            </form>
+        </section>
+          <section class="md:w-[50%] w-[100%] p-6 mx-auto bg-red-900 rounded-md shadow-md dark:bg-gray-800 mt-5">
+            <h1 class="text-xl font-bold text-white capitalize dark:text-white"><i class="bi bi-person-lines-fill mr-2"></i>Agency List</h1>
+            <section class="antialiased bg-gray-100 text-gray-600 mt-3">
+              <div class="flex flex-col justify-center h-full">
+                  <!-- Table -->
+                  <div class="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+                      <header class="px-5 py-4 border-b border-gray-100">
+                          <h2 class="font-semibold text-gray-800">Agents</h2>
+                      </header>
+                      <div class="p-3">
+                          <div class="overflow-x-auto">
+                              <table class="table-auto w-full">
+                                  <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+                                      <tr>
+                                          <th class="p-2 whitespace-nowrap">
+                                              <div class="font-semibold text-left">Name</div>
+                                          </th>
+                                          <th class="p-2 whitespace-nowrap">
+                                              <div class="font-semibold text-left">Email</div>
+                                          </th>
+                                          <th class="p-2 whitespace-nowrap">
+                                              <div class="font-semibold text-left">Spent</div>
+                                          </th>
+                                          <th class="p-2 whitespace-nowrap">
+                                              <div class="font-semibold text-center">Country</div>
+                                          </th>
+                                      </tr>
+                                  </thead>
+                                  <tbody class="text-sm divide-y divide-gray-100">
+                                      <tr>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="flex items-center">
+                                                  <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-05.jpg" width="40" height="40" alt="Alex Shatov"></div>
+                                                  <div class="font-medium text-gray-800">Alex Shatov</div>
+                                              </div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-left">alexshatov@gmail.com</div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-left font-medium text-green-500">$2,890.66</div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-lg text-center">??</div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="flex items-center">
+                                                  <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-06.jpg" width="40" height="40" alt="Philip Harbach"></div>
+                                                  <div class="font-medium text-gray-800">Philip Harbach</div>
+                                              </div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-left">philip.h@gmail.com</div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-left font-medium text-green-500">$2,767.04</div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-lg text-center">??</div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="flex items-center">
+                                                  <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-07.jpg" width="40" height="40" alt="Mirko Fisuk"></div>
+                                                  <div class="font-medium text-gray-800">Mirko Fisuk</div>
+                                              </div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-left">mirkofisuk@gmail.com</div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-left font-medium text-green-500">$2,996.00</div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-lg text-center">??</div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="flex items-center">
+                                                  <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-08.jpg" width="40" height="40" alt="Olga Semklo"></div>
+                                                  <div class="font-medium text-gray-800">Olga Semklo</div>
+                                              </div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-left">olga.s@cool.design</div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-left font-medium text-green-500">$1,220.66</div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-lg text-center">??</div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="flex items-center">
+                                                  <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-09.jpg" width="40" height="40" alt="Burak Long"></div>
+                                                  <div class="font-medium text-gray-800">Burak Long</div>
+                                              </div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-left">longburak@gmail.com</div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-left font-medium text-green-500">$1,890.66</div>
+                                          </td>
+                                          <td class="p-2 whitespace-nowrap">
+                                              <div class="text-lg text-center">??</div>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+        </section>
+          <!-- /End replace -->
+      </div>
+  </main>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
